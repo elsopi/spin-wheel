@@ -122,7 +122,7 @@
         align-items: center;
         list-style: none;
         position: relative;
-        transition: 10000ms ease-out;
+        // transition: 4000ms ease-out;
         //   animation: rotate 1.2s ease-in infinite;
 
         //   border: 2px solid green;
@@ -439,6 +439,14 @@
       box-shadow: none;
       transform: translateY(4px);
     }
+    &:disabled {
+      background-color: #818181;
+      box-shadow: none;
+      transform: translateY(4px);
+      .text-shadows {
+        animation: none;
+      }
+    }
   }
 }
 .text-shadows {
@@ -647,5 +655,17 @@ li {
     font-family: "Roboto Slab", serif;
     transform: translateY(-1000%);
     transition: 300ms 300ms ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      font-weight: 500;
+      font-size: 20px;
+    }
   }
 }
